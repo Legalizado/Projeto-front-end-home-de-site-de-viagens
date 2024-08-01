@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+
+    
+
+
+</head>
+
+<body> 
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>dayjs.locale('PT-BR')</script>
+    <script src="jjs.js"></script>
+
+  
+        
+   
+    
+    
+    
+
+    <div id="app">
+        <div class="whitemode">
+            <input type="checkbox" id="whitemode" name="whitemode" class="whitemode">
+        </div>
+        <div class="fields">
+            <div id="place" class="card-bg">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.6666 8.33334C16.6666 13.3333 9.99992 18.3333 9.99992 18.3333C9.99992 18.3333 3.33325 13.3333 3.33325 8.33334C3.33325 6.56523 4.03563 4.86954 5.28587 3.61929C6.53612 2.36905 8.23181 1.66667 9.99992 1.66667C11.768 1.66667 13.4637 2.36905 14.714 3.61929C15.9642 4.86954 16.6666 6.56523 16.6666 8.33334Z" stroke="#A1A1AA" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.99992 10.8333C11.3806 10.8333 12.4999 9.71405 12.4999 8.33334C12.4999 6.95263 11.3806 5.83334 9.99992 5.83334C8.61921 5.83334 7.49992 6.95263 7.49992 8.33334C7.49992 9.71405 8.61921 10.8333 9.99992 10.8333Z" stroke="#A1A1AA" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                
+                São paulo, Brasil</div>
+            <div class="field-wrapper">
+            
+            <form onsubmit="SalvarAtividade(event)">
+                <div class="field-item">
+                <svg class="icon" width="20" height="20" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.8217 2.48833C10.5092 2.17575 10.0853 2.00009 9.64333 2H3.66667C3.22464 2 2.80072 2.17559 2.48816 2.48816C2.17559 2.80072 2 3.22464 2 3.66667V9.64333C2.00009 10.0853 2.17575 10.5092 2.48833 10.8217L9.74167 18.075C10.1204 18.4514 10.6327 18.6626 11.1667 18.6626C11.7006 18.6626 12.2129 18.4514 12.5917 18.075L18.075 12.5917C18.4514 12.2129 18.6626 11.7006 18.6626 11.1667C18.6626 10.6327 18.4514 10.1204 18.075 9.74167L10.8217 2.48833Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.58333 7C6.81345 7 7 6.81345 7 6.58333C7 6.35321 6.81345 6.16667 6.58333 6.16667C6.35321 6.16667 6.16667 6.35321 6.16667 6.58333C6.16667 6.81345 6.35321 7 6.58333 7Z" stroke="#E4E4E7" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                    
+                <input type="text" maxlength="20"  placeholder="Qual a sua atividade?" name="atividade" required >
+            </div>
+            </div>
+            <div class="field-wrapper">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.66667 1.66666V4.99999M13.3333 1.66666V4.99999M2.5 8.33332H17.5M4.16667 3.33332H15.8333C16.7538 3.33332 17.5 4.07952 17.5 4.99999V16.6667C17.5 17.5871 16.7538 18.3333 15.8333 18.3333H4.16667C3.24619 18.3333 2.5 17.5871 2.5 16.6667V4.99999C2.5 4.07952 3.24619 3.33332 4.16667 3.33332Z" stroke="#A1A1AA" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                <select name="dia">
+                    <option value="2024-07-06">1 de fevereiro</option>
+                </select>
+                </div>
+            <div class="field-wrapper">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.0001 4.99999V9.99999L13.3334 11.6667M18.3334 9.99999C18.3334 14.6024 14.6025 18.3333 10.0001 18.3333C5.39771 18.3333 1.66675 14.6024 1.66675 9.99999C1.66675 5.39762 5.39771 1.66666 10.0001 1.66666C14.6025 1.66666 18.3334 5.39762 18.3334 9.99999Z" stroke="#A1A1AA" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    
+                <select name="hora">
+                    <option value="10:30">10:30</option>
+                </select>
+            </div>
+            
+            <button id="click"  onclick="clicar()">Salvar Atividade</button>
+            
+        </div>   
+        </form>
+        
+        <main>
+        <h1 id="ativi" class="ativi" onclick="gerenciarAtividade(event)" onmouseenter="gerenciarAtividade(event)" >Atividades</h1>
+        <section>
+            
+        </section>
+        </main>
+    </div>
+
+
+    <script>
+
+
+        function gerenciarAtividade(event) {
+        var c = document.getElementById("ativi");
+
+        switch (event.type) {
+            case "click":
+                const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+                c.style.color = "#" + randomColor;
+                break;
+            case "mouseenter":
+                c.style.color = "white";
+                break;
+        }
+
+
+        }
+            
+        const formatador = function(data) {
+            return {
+                dia:{
+                numerico: dayjs(data).format('DD'),
+                semana: {
+                    curto: dayjs(data).format('ddd'),
+                    longo: dayjs(data).format('dddd')
+                } },
+                mes:dayjs(data).format('MMMM'),
+                hora: dayjs(data).format('HH-mm'),
+
+
+            };
+    }
+        
+
+
+       let atividades = [
+        {nome: "Academia",
+            data: new Date("2024-07-10 11:00"),
+            finalizada: true,
+        },
+        {
+        nome: "Ir ao parque",
+        data: new Date("2024-06-15 11:00"),
+        finalizada: false,
+        },{
+        nome: "Visitar o coliseu",
+        data: new Date("2024-07-16 11:00"),
+        finalizada: false,
+        },
+
+       ]
+
+       
+
+        const criaratividade = function (atividade) {
+            let input = `<input onchange="concluirAtividade(event)" value="${atividade.data}" type="checkbox" `;
+            
+
+            if(atividade.finalizada) {
+                input = input + "checked"
+            }
+
+            input = input + '>'
+
+            const formatar = formatador(atividade.data)
+
+            return ` <div class="card-bg">
+                        ${input}
+                        <div>
+                             <svg class="active" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M7.50008 9.99999L9.16675 11.6667L12.5001 8.33332M18.3334 9.99999C18.3334 14.6024 14.6025 18.3333 10.0001 18.3333C5.39771 18.3333 1.66675 14.6024 1.66675 9.99999C1.66675 5.39762 5.39771 1.66666 10.0001 1.66666C14.6025 1.66666 18.3334 5.39762 18.3334 9.99999Z" stroke="#BEF264" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+
+                             <svg class="inactive" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.41664 1.81833C9.46249 1.61593 10.5374 1.61593 11.5833 1.81833M11.5833 18.1817C10.5374 18.3841 9.46249 18.3841 8.41664 18.1817M14.6741 3.10083C15.5587 3.70019 16.3197 4.46406 16.9158 5.35083M1.8183 11.5833C1.6159 10.5375 1.6159 9.46252 1.8183 8.41667M16.8991 14.6742C16.2998 15.5587 15.5359 16.3198 14.6491 16.9158M18.1816 8.41667C18.384 9.46252 18.384 10.5375 18.1816 11.5833M3.1008 5.32583C3.70016 4.44128 4.46403 3.68023 5.3508 3.08417M5.3258 16.8992C4.44124 16.2998 3.6802 15.5359 3.08414 14.6492" stroke="#A1A1AA" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+
+                            <span> ${atividade.nome}</span>
+                        </div>
+                        <time class="short">
+                            ${formatar.dia.semana.curto}.
+                            ${formatar.dia.numerico} <br>
+                            ${formatar.hora}
+                             </time>
+                        <time class="full"> ${formatar.dia.semana.longo} dia 
+                            ${formatar.dia.numerico} de ${formatar.mes} ás ${formatar.hora}h</time>
+                    
+                
+                </div>`  
+
+        }
+        
+
+
+          const atualizaratividade =  function() {
+            const section = document.querySelector('section')
+            section.innerHTML = ''
+
+            if(atividades.length == 0){
+                section.innerHTML = `<p> Nenhuma atividade registrada. </p>`
+                return
+            }
+            for(let atividade of atividades) {
+                section.innerHTML += criaratividade(atividade)
+            }
+          }
+
+        
+          atualizaratividade()
+
+          const SalvarAtividade = function(event) {
+            event.preventDefault();
+            const dadosFormulario = new FormData(event.target);
+
+            
+            const nome = dadosFormulario.get('atividade');
+            const dia = dadosFormulario.get('dia');
+            const hora = dadosFormulario.get('hora');
+            const data = `${dia} ${hora}`
+
+            const atividade = {
+            nome : nome,
+            data : data ,
+            finalizada: false}
+
+           const atividadeExiste = atividades.find(function(a) {
+            return a.data == atividade.data
+           })
+
+           if(atividadeExiste){
+            return alert("Datas ou horas iguais");
+            
+           }
+
+
+
+            atividades = [atividade, ...atividades]
+            
+            atualizaratividade()
+
+          }
+          
+          
+
+          const criarDiasSelect = function(){
+            const dias = [
+                "2024-07-02",
+                "2024-07-03",
+                "2024-07-04",
+                "2024-07-05",
+                "2024-07-06",
+
+
+            ]
+            let diasSelect = ''
+            for(let dia of dias){
+                let format = formatador(dia)
+                let diasFormatado = `${format.dia.numerico} de
+                ${format.mes}`
+                diasSelect += `
+                <option value="${dia}"> ${diasFormatado}</option>`
+                
+            }
+        
+            document.querySelector('select[name="dia"]').innerHTML = diasSelect
+          }
+          criarDiasSelect()
+
+          const horasDisponiveis = function() {
+            let horasDisponivel = ``
+           
+            for(let i = 6; i < 24;i++){
+                 
+                horasDisponivel += `<option value="${i}"> ${i}:00 </option>`
+                horasDisponivel += `<option value="${i}:30"> ${i}:30 </option>`
+                
+            }
+
+            document.querySelector("select[name='hora']").innerHTML = horasDisponivel
+          }
+
+          horasDisponiveis()
+
+          const concluirAtividade = function(event) {
+            const input = event.target
+            const dataInput = input.value
+            const atividade = atividades.find(function(atividade){
+                return atividade.data == dataInput
+            })
+
+            if(!atividade){return}
+
+            atividade.finalizada = !atividade.finalizada
+
+        
+          }
+         
+          document.addEventListener('DOMContentLoaded', (event) => {
+      
+        const toggleWhiteMode = document.getElementById('whitemode');
+
+       
+        toggleWhiteMode.addEventListener('change', function() {
+          
+            if (this.checked) {
+                document.documentElement.classList.add('white-mode');
+            } else {
+                document.documentElement.classList.remove('white-mode');
+            }
+        });
+    });
+          
+    </script>
+    
+</body>
+</html>

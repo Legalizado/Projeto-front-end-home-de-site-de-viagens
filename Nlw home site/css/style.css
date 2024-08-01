@@ -1,0 +1,256 @@
+*{margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+.whitemode input[type="checkbox"]{
+    appearance: none;
+    position:absolute;
+    margin-left: 300px;
+    width: 40px;
+    height: 21px;
+    border:solid #ebebeb 1px;
+    margin-top: 10px;
+    background-color: #3636389d;
+    cursor:pointer;
+    border-radius: 20px;
+    transition: .2ms;
+}
+
+.whitemode input[type="checkbox"]::before{
+    content:"";
+    position: absolute;
+    background-color: #aff445;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: 3px;
+    margin-left: 3px;
+    transition: .2ms;
+}
+
+
+
+.whitemode input[type="checkbox"]:checked{
+    background-color: white;
+    transition: .9ms;
+}
+.whitemode input[type="checkbox"]:checked::before{
+    content:"";
+    position: absolute;
+    background-color:rgb(236, 236, 236);
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+    margin-left: 21px;
+    border-radius: 50%;
+    transform: translateX(-2px);
+}
+
+html.white-mode{
+    background-color:rgb(224, 222, 222);
+    color:black;
+}
+html.white-mode .ativi{
+    color:black;
+    font-weight: 30px;
+}
+html.white-mode .whitemode input[type="checkbox"]{
+    border:solid #3636389d 1px;
+}
+html.white-mode .card-bg{
+    color:white;
+}
+html{
+    font-family: inter, sans-serif;
+    background-color:#000216;
+    
+}
+input, select{
+    all:unset
+}
+html, input, select, button{
+    font-family: inter, sans-serif;  
+    width:100%;
+    color:white;
+    background-color: #09090b;
+    line-height:120%;
+    letter-spacing: 0.02em;;
+}
+
+html{
+    font-family: inter, sans-serif;
+    background-color:#000216;
+    
+}
+
+.fields{
+display: grid;
+gap:8px;}
+
+
+#place{
+    display:flex;
+    align-items: center;
+    gap:8px;
+    padding: 16px 20px;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+    margin-bottom: 20px;
+}
+.card-bg{
+background: #18181B;
+box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03), inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+border-radius: 12px;
+}
+
+.field-item{
+    display:flex;
+    align-items: center;
+    gap:10px;
+
+}
+.field-wrapper{
+    display:flex;
+    padding:13px;
+    background-color: #09090b;
+    border: 1px solid rgb(15, 15, 15);
+    border-radius: 8px;
+    display:flex;
+    gap:10px;
+    
+}
+
+
+#click{
+    margin-top:20px;
+    border:none;
+    padding:12px 10px;
+    background-color: #aff445;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #081300;
+    cursor:pointer;
+}
+
+#app{
+    padding:40px 20px;
+    max-width: 320px;
+    margin:auto;
+    
+}
+
+h1{
+    color:aliceblue;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom:24px;
+}
+section{color:white;display:grid;gap:6px;
+    
+
+}
+
+
+
+
+.field-wrapper{
+    position: relative;
+}
+
+main{
+    margin-top:32px;
+}
+
+section input[type="checkbox"] {
+    
+    position:absolute;
+    inset:0;
+    opacity: 0;
+
+}
+
+section .card-bg{
+    padding:10px 16px;
+    position:relative;
+    display:flex;
+    text-align: center;
+    justify-content: space-between;
+}
+section .card-bg:has(:checked) .active,
+section .card-bg .inactive{
+    display:block;
+}
+
+section .card-bg:has(:checked) .inactive,
+section .card-bg .active{
+    display:none;
+}
+
+section .card-bg > div {
+    display:flex;
+    text-align: center;
+    gap:10px;
+
+}
+
+time{
+    font-size:12px;
+    color:#a1a1ab;
+    text-align: right;
+    
+}
+time.full{
+    display: none;
+}
+
+
+#testee{
+    color:#b61d1d
+}
+.field-wrapper :focus-within{
+    outline: 2px solid rgb(23, 20, 43)
+}
+
+
+
+@media(width> 1024px){
+    .whitemode{
+        
+        position: relative;
+        
+
+    }
+    .whitemode input[type="checkbox"]{
+        position:absolute;
+        margin-left: 500px;
+    }
+    #app{
+        display:flex;
+        max-width: 960px;
+        gap:32px;
+    }
+    main{margin-top: 0;
+        flex:1;
+    
+    }
+    h1{
+        text-align: left;
+    }
+
+    time.full{
+        display:block
+    }
+
+    time.short{
+        display:none;
+    }
+
+    .html .white-mode .ativi{
+        color:black;
+    }
+    
+}
